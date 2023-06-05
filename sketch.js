@@ -11,23 +11,33 @@ let img2;
 let img3;
 let img4;
 
+let myFont
 
 let currentImageIndex = 0;
-let totalImages = 4; 
+let totalImages = 10; 
 let currentImageNumber = 1;
 
 function setup() {
 
   const canvas = createCanvas(w, h);
-  img1 = loadImage('./public/output-onlinegiftools.gif');
+  img1 = loadImage('./public/The data visualisatino of my idiosyncrasies_Page_12 (Small).png');
   img2 = loadImage('./public//FLUX 1.jpg');
-  img3 = loadImage('./public/RENDER.png');
+  img3 = loadImage('./public/output-onlinegiftools.gif');
   img4 = loadImage('./public/LOGO1.png');
+  img5 = loadImage('./public/output-onlinegiftools (1).gif');
+  img6 = loadImage('./public/Baner Free Mockup.png');
+  img7 = loadImage('./public/Baner Free Mockup (1).png');
+  img8 = loadImage('./public/MP.png');
+  img9 = loadImage('./public/v2-o.png');
+  img10 = loadImage('./public/RENDER.png');
+
+
   background(0);
   offset = 0.5;
   scalar = 180;
   angle = 0;
   speed = 0.0009;
+  myFont = loadFont('./public/MONOTESK-REGULAR.otf');
 
   canvas.mouseClicked(() => {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
@@ -40,8 +50,9 @@ function draw() {
 
   background(0);
   fill('#ffffff');
+  textFont(myFont);
   textAlign(LEFT, BOTTOM);
-  textSize(40);
+  textSize(20);
   text(`Click Me: ${currentImageNumber}/${totalImages}`, mouseX, mouseY);
 
   translate(width/2, height/2);
@@ -62,7 +73,21 @@ function draw() {
       image(img3, 0, 0, mouseX * 0.3, mouseY * 0.3);
     } else if (currentImageIndex === 3) {
       image(img4, 0, 0, mouseX * 0.3, mouseY * 0.3);
-    }
+    } else if (currentImageIndex === 4) {
+      image(img5, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } else if (currentImageIndex === 5) {
+      image(img6, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } else if (currentImageIndex === 6) {
+      image(img7, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } else if (currentImageIndex === 7) {
+      image(img8, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } else if (currentImageIndex === 8) {
+      image(img9, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } else if (currentImageIndex === 9) {
+      image(img10, 0, 0, mouseX * 0.3, mouseY * 0.3);
+    } 
+
+
     x += 0.1;
   }
   
