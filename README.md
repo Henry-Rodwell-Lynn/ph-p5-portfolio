@@ -1,6 +1,6 @@
 # ph-p5-portfolio
 
-### Temporary Site Screen for my personal wiebsite [Link](https://henryrodwell.com/)
+### Temporary Site Screen for my personal wiebsite [Here](https://henryrodwell.com/)
 
 # Check out my other work ⬇️
 
